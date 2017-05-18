@@ -1,52 +1,46 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:orientation="horizontal"
     android:background="#e1e1e1"
-    android:orientation="vertical" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <ListView
-        android:id="@+id/msgListView"
+    <ListView android:id="@+id/msgListView"
+        android:paddingBottom="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/form"
         android:divider="@null"
         android:dividerHeight="0dp"
-        android:paddingBottom="10dp"
-        android:text="Hello World" />
+        android:text="+@string/hello_world"
+        android:layout_above="@+id/form" />
 
     <LinearLayout
+        android:orientation="horizontal"
         android:id="@+id/form"
+        android:background="#91f1f1f1"
+        android:paddingBottom="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:background="#91f1f1f1"
-        android:orientation="horizontal"
-        android:paddingBottom="2dp" >
+        android:layout_alignParentBottom="true">
 
-
-        <EditText
-            android:id="@+id/messageEditText"
+        <EditText android:id="@+id/messageEditText"
             android:layout_width="252dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignTop="@+id/button1"
-            android:layout_toLeftOf="@+id/sendMessageButton"
-            android:layout_weight="0.72"
+            android:maxHeight="80dp"
             android:ems="10"
-            android:maxHeight="80dp" />
+            android:layout_weight="0.72"
+            android:layout_toLeftOf="@+id/sendMessageButton"
+            android:layout_alignTop="@+id/sendMessageButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true" />
 
-        <ImageButton
-            android:id="@+id/sendMessageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
+        <ImageButton android:id="@+id/sendMessageButton"
             android:background="@drawable/send_button"
-            android:text="d" />
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true" />
+
     </LinearLayout>
-
-
 </RelativeLayout>
